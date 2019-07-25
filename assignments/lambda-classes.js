@@ -75,11 +75,26 @@ const testInstructor = new Instructor({
     catchPhrase: "It's a trap"
 })
 
+const testInstructor2 = new Instructor({
+    name: 'testInstructor2',
+    age: 27,
+    location: 'France',
+    specialty: 'HTML',
+    favLanguage: 'CSS',
+    catchPhrase: "Who goes there"
+})
+
 console.log(testInstructor);
 testInstructor.speak();
 testInstructor.demo('anything');
 testInstructor.grade('Raul','Math');
 testInstructor.changeGrade('Raul', 0);
+
+console.log(testInstructor2);
+testInstructor2.speak();
+testInstructor2.demo('phrases');
+testInstructor2.grade('Raul','Javascript');
+testInstructor2.changeGrade('Paula', 0);
 
 
 const testStudent = new Student({
@@ -92,10 +107,25 @@ const testStudent = new Student({
     grade: Math.floor(Math.random() * 100),
 })
 
+const testStudent2 = new Student({
+    name: 'testStudent2',
+    age: 27,
+    location: 'Japan',
+    previousBackground: 'AppAcademy',
+    className: 'Web21',
+    favSubjects: ["Javascript", "HTML", "CSS", "React"],
+    grade: Math.floor(Math.random() * 100),
+})
+
 console.log(testStudent);
 testStudent.listsSubjects();
 testStudent.PRAssignment('Math');
 testStudent.sprintChallenge('Javascript-III');
+
+console.log(testStudent2);
+testStudent2.listsSubjects();
+testStudent2.PRAssignment('Math');
+testStudent2.sprintChallenge('Javascript-III');
 
 
 
@@ -110,6 +140,21 @@ const testProjectManager = new projectManager({
     favInstructor: 'Britt Hemming',
 })
 
+const testProjectManager2 = new projectManager({
+    name: 'testPM2',
+    age:28,
+    location: 'USA',
+    specialty: 'JQuery',
+    favLanguage: 'CSS',
+    catchPhrase: "Im the PM",
+    gradClassName: 'Web18',
+    favInstructor: 'Britt Hemming',
+})
+
 console.log(testProjectManager);
 testProjectManager.standUp('Web22');
 testProjectManager.debugsCode('Iris','Javascript')
+
+console.log(testProjectManager2);
+testProjectManager2.standUp('Web21');
+testProjectManager2.debugsCode('Tristan','React')
