@@ -24,6 +24,9 @@ class Instructor extends Person{
     grade(student, subject){
         console.log(`${student} recieves a perfect score on ${subject}`)
     }
+    changeGrade(student, grade){
+        console.log(`${this.name} changed ${student}'s grade from ${grade} to`) + console.log((Math.random() * 100))
+    }
 }
 
 class Student extends Person{
@@ -76,6 +79,7 @@ console.log(testInstructor);
 testInstructor.speak();
 testInstructor.demo('anything');
 testInstructor.grade('Raul','Math');
+testInstructor.changeGrade('Raul', 0);
 
 
 const testStudent = new Student({
